@@ -4,11 +4,10 @@ body {
   font-family: sans-serif;
 }
 
-footer > p{
+footer{
 	text-align: center;
 }
 
 .jumbotron{
 	text-align: center;
-	background-color: #000000;
 }
