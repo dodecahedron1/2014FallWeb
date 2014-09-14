@@ -18,7 +18,7 @@
 		<!--NAVBAR-->
 		<div>
           <div class="navbar navbar-default">
-        <div class="container">
+          <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
               <span class="sr-only">Toggle navigation</span>
@@ -30,23 +30,19 @@
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-            <li><a href="recipes.html">Recipes</a></li>
-            <li><a href="progress.html">Progress</a></li>
-            <li><a href="profile.html">Profile</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
+                <li><a href="about.html">About</a></li>
+                 <li class="dropdown">
+                	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Your NuYu<span class="caret"></span></a>
+               			 <ul class="dropdown-menu" role="menu">
+                 				 <li><a href="profile.html">Profile</a></li>
+                 				 <li><a href="progress.html">Progress</a></li>
+                  				<li><a href="food_log.html">Food Log</a></li>
+                  				<li class="divider"></li>
+                                 <li><a href="#">Sign Out</a></li>
+                		</ul>
+                		
+              	</li>
+              	<li><a href="recipes.html">Recipes</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
@@ -63,21 +59,21 @@
     <!--JUMBOTRON-->
      <div class="jumbotron">
         <h1>Welcome to the NuYu</h1>
-        <p class="lead">NuYu is a fitness tracker app that takes your needs into account. NuYu can help you obtain a goal weight or keep you in shape. Some features include recipies based on your diet, music to get you pumped up, and a progress report to keep you up to date on your weight loss. Sign up today and let NuYu create the 'New You.' </p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Sign Up Today!</a></p>
+        <p class="lead">NuYu is a fitness tracker app that takes your needs into account. NuYu can help you obtain a goal weight or keep you in shape. Some features include: recipes based on your preferred diet, a food log to keep track of your caloric intake, and a progress report to keep you up to date on your weight loss. Sign up today and let NuYu create the 'New You.' </p>
+        <p><a class="btn btn-lg btn-success" href="sign_up.php" role="button">Sign Up Today!</a></p>
       </div>
     
     <!--COLUMNS-->
 	<div class="container">
       <div class="row">
         <div class="col-md-4">
-          <h2>Recipies</h2>
-          <p>You can't just work out. You have to make sure you're eating right too! Check out these healthy and tasty recipie ideas! Whether you eat vegan, kosher, or a gluten-free diet, NuYu has all the best dishes that are beneficial to your progress. </p>
+          <h2>Recipes</h2>
+          <p>You can't just work out. You have to make sure you're eating right too! Check out these healthy and tasty meal ideas! Whether you eat vegan, kosher, or a gluten-free diet, NuYu has all the best dishes to keep you energized and feeling slim. </p>
           <p><a class="btn btn-default" href="recipes.html" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <h2>Progress</h2>
+          <p>Keeping track of your weight loss, the progress feature helps you establish a guidedline to a healthier life. Based on your input, graphs and charts are created to guide your fitness journey, help you reach your goals, and show you how far you've come.</p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
@@ -86,29 +82,9 @@
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
       </div>
-      
-      <div class="dropdown">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Dropdown
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-    <li role="presentation" class="divider"></li>
-    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-  </ul>
-</div>
 
-      
-
-
-
-			<footer>
-				<p></p>
-				<p></p>
-				<p></p>
+<footer>
+				
 				<blockquote>
   				<p>You are never too old to set another goal or dream a new dream.</p>
 				  <footer>C.S. Lewis</footer>
@@ -123,9 +99,8 @@
 	
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   
 		
 	</body>
 </html>
