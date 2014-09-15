@@ -32,7 +32,6 @@
                  <li class="dropdown">
                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Your NuYu<span class="caret"></span></a>
                			 <ul class="dropdown-menu" role="menu">
-                 				 <li><a href="profile.html">Profile</a></li>
                  				 <li><a href="progress.html">Progress</a></li>
                   				<li><a href="food_log.html">Food Log</a></li>
                   				<li class="divider"></li>
