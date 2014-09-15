@@ -26,7 +26,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.php">NuYu</a>
+            <a class="navbar-brand" href="index.php">NuYu<span class="glyphicon glyphicon-heart-empty"></span></a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -74,13 +74,13 @@
         <div class="col-md-4">
           <h2>Progress</h2>
           <p>Keeping track of your weight loss, the progress feature helps you establish a guidedline to a healthier life. Based on your input, graphs and charts are created to guide your fitness journey, help you reach your goals, and show you how far you've come.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <p><a class="btn btn-default" href="progress.html" role="button">View details &raquo;</a></p>
        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
+          <h2>Contact</h2>
+          <p>Questions? Comments? Concerns? Feel free to contact NuYu if you need to reach us. We are always ready to aid you in your fitness journey.</p>
+          <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="Our Email is NuYu@gmail.com">Click here for our email! </button>
+                  </div>
       </div>
 
 <footer>
@@ -98,8 +98,9 @@
 		
 	
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
    
 		
 	</body>
