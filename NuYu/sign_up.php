@@ -13,7 +13,7 @@
 	</head>
 
 	<body>
-			<!--NAVBAR-->
+			
 		<div>
           <div class="navbar navbar-default">
           <div class="container">
