@@ -1,6 +1,4 @@
 <?
-	include_once __DIR__ . '/../inc/_all.php';
-
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $method = isset($_POST['submit']) ? 'POST' : 'GET';
 $format = isset($_REQUEST['format']) ? $_REQUEST['format'] : 'web';
@@ -35,6 +33,7 @@ switch ($format) {
 		break;		
 	case 'web':
 	default:
-		include __DIR__ . "/../Views/Shared/_Template.php";		
+		include __DIR__ . "/../Views/Shared/_Template.php";	
+		include __DIR__ . "/../Views/$view";	
 		break;
 }

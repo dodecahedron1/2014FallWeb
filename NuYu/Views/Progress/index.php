@@ -9,7 +9,7 @@
       <div class="col-md-6 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Your Progress</h1>
           
-        <a href="progress_forms.php"><button type="button" class="btn btn-primary">Click here to submit your progress! </button></a>
+        <a href="http://cs.newpaltz.edu/~n02511295/2014Fall/Views/Progress/edit.php"> <button class="btn btn-primary">Click here to submit your progress! </button></a>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
@@ -69,7 +69,8 @@
 			</div>
 
 		<script type="text/javascript">
-			$(function(){				
+			$(function(){
+								
 				$('#myModal').on('hidden.bs.modal', function (e) {
 				  $("#myAlert").show();
 				})
