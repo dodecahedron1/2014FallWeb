@@ -2,7 +2,7 @@
      <div class="jumbotron">
         <h1>Welcome to the NuYu</h1>
         <p class="lead">NuYu is a fitness tracker app that takes your needs into account. NuYu can help you obtain a goal weight or keep you in shape. Some features include: recipes based on your preferred diet, a food log to keep track of your caloric intake, and a progress report to keep you up to date on your weight loss. Sign up today and let NuYu create the 'New You.' </p>
-        <p><a class="btn btn-lg btn-success" href="sign_up.php" role="button">Sign Up Today!</a></p>
+        <p><a class="btn btn-lg btn-success" href="../Controllers/signup.php" role="button">Sign Up Today!</a></p>
       </div>
     
     <!--COLUMNS-->

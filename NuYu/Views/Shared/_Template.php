@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<link rel="stylesheet" href="stylesheet.css" style="text/css">
+		<link rel="stylesheet" href="../includes/stylesheet.css" style="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
@@ -26,21 +26,21 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-			<a class="navbar-brand" href="index.php">NuYu<span class="glyphicon glyphicon-heart-empty"></span></a>          </div>
+			<a class="navbar-brand" href="../Controllers/home.php">NuYu<span class="glyphicon glyphicon-heart-empty"></span></a>          </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="about.html">About</a></li>
+                <li><a href="../Controllers/about.php">About</a></li>
                  <li class="dropdown">
                 	<a href="#" class="dropdown-toggle" data-toggle="dropdown">Your NuYu<span class="caret"></span></a>
                			 <ul class="dropdown-menu" role="menu">
-                 				 <li><a href="progress.html">Progress</a></li>
-                  				<li><a href="food_log.html">Food Log</a></li>
+                 				 <li><a href="../Controllers/progress.php">Progress</a></li>
+                  				<li><a href="../Controllers/food_log.php">Food Log</a></li>
                   				<li class="divider"></li>
                                  <li><a href="#">Sign Out</a></li>
                 		</ul>
                 		
               	</li>
-              	<li><a href="recipes.html">Recipes</a></li>
+              	<li><a href="../Controllers/recipes.php">Recipes</a></li>
             </ul>
             <form class="navbar-form navbar-right" role="form">
             <div class="form-group">
