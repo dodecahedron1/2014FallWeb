@@ -1,4 +1,5 @@
 <?
+  include_once __DIR__ . '/../includes/_all.php';
 
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : null;
 $method = isset($_POST['submit']) ? 'POST' : 'GET';
@@ -7,33 +8,32 @@ $view 	= null;
 
 switch ($action . '_' . $method) {
 	case 'create_GET':
-		break;
-	case 'create_POST':
+		$model3 = Profile::Blank(); 
+		$view = "Profile/edit.php";
 		break;
 	case 'edit_GET':
+		$model3 = Profile::Get($_REQUEST['id']);
+		$view = "Profile/edit.php";
 		break;
-	case 'edit_POST':
-		break;
-	case 'delete_GET':	
-		break;
-	case 'delete_POST':
 		break;
 	case 'index_GET':
 	default:
-		$view = 'Profile/index.php';
+		$model3 = Profile::Get();
+		$view = "Profile/index.php";		
 		break;
-}
+} 
 
 switch ($format) {
 	case 'json':
+		echo json_encode($model3);
 		break;
 	case 'plain':
 		include __DIR__ . "/../Views/$view";		
 		break;		
 	case 'web':
-	default:
-		include __DIR__ . "/../Views/Shared/_Template.php";		
+    default:
+		include __DIR__ . "/../Views/Shared/_Template.php";	
 		include __DIR__ . "/../Views/$view";	
-		break;
-}
-?>
+ 		break;
+} 
+

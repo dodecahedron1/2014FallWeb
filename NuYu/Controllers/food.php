@@ -28,14 +28,8 @@ switch ($action . '_' . $method) {
 				$view = "FoodTracker/edit.php";		
 			}
 			break;
-	case 'delete':
-			if($_SERVER['REQUEST_METHOD'] == 'GET'){
-			}else{
-				
-			}
-			break;
-			
-	break;
+
+break;
 
 	
 	case 'edit_GET':

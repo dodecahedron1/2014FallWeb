@@ -33,13 +33,12 @@
                	<li><a href="../Controllers/progress.php">Excercise Tracker</a></li>
 				<li><a href="../Controllers/food.php">Food Tracker</a></li>
               	<li><a href="../Controllers/profile.php">Your NuYu</a></li>
-
-
-              	<li><a href="../Controllers/recipes.php">Recipes</a></li>
-            </ul>
+		  </ul>
             <form class="navbar-form navbar-right" role="form">
             	
             	</div>
+				
+			</div>			
 			      </div>			
             </div><!--/.nav-collapse -->
            </div>
@@ -53,12 +52,12 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.4.0/holder.js"></script>
 
-<script>
+				<script>
 				  window.fbAsyncInit = function() {
-  					 FB.init({
-				     appId      : '612157338912183',
-				     xfbml      :  true,
-				     version    : 'v2.2'
+				    FB.init({
+				      appId      : '612157338912183',
+				      xfbml      : true,
+				      version    : 'v2.2'
 				    });
 				  };
 				
@@ -69,34 +68,34 @@
 				     js.src = "//connect.facebook.net/en_US/sdk.js";
 				     fjs.parentNode.insertBefore(js, fjs);
 				   }(document, 'script', 'facebook-jssdk'));
-		</script>
+				</script>
    <script type="text/javascript">
-+			var $socialScope = null;
-+			angular.module('app', [])
-+				.controller('social', function($scope){
-+					$socialScope = $scope;
-+					$socialScope.$apply();
-+				});
-+			function checkLoginState() {
-+			    FB.getLoginStatus(function(response) {
-+				    $socialScope.status = response;
-+				    if (response.status === 'connected') {
-+				      FB.api('/me', function(response) {
-+					      $socialScope.me = response;
-+					      $socialScope.$apply();
-+					      console.log(response);
-+					    });
-+				    } else if (response.status === 'not_authorized') {
-+				      // The person is logged into Facebook, but not your app.
-+				      console.log('not_authorized');
-+				    } else {
-+				      // The person is not logged into Facebook, so we're not sure if
-+				      // they are logged into this app or not.
-+				      console.log('Not Logged in');
-+				    }
-+			    });
-+			  }
-+		</script>
+			var $socialScope = null;
+			angular.module('app', [])
+				.controller('social', function($scope){
+					$socialScope = $scope;
+					$socialScope.$apply();
+									});
+			function checkLoginState() {
+			    FB.getLoginStatus(function(response) {
+				    $socialScope.status = response;
+				    if (response.status === 'connected') {
+				      FB.api('/me', function(response) {
+					      $socialScope.me = response;
+				      $socialScope.$apply();
+					      console.log(response);
+					    });
+				    } else if (response.status === 'not_authorized') {
+				      // The person is logged into Facebook, but not your app.
+				      console.log('not_authorized');
+				    } else {
+				      // The person is not logged into Facebook, so we're not sure if
+				      // they are logged into this app or not.
+				      console.log('Not Logged in');
+				    }
+			    });
+			  }
+		</script>
 
 	</body>
 </html>
