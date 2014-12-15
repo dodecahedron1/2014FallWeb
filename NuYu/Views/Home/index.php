@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Food</h2>
-          <p>You can't just work out. You have to make sure you're eating right too! Check out these healthy and tasty meal ideas! Whether you eat vegan, kosher, or a gluten-free diet, NuYu has all the best dishes to keep you energized and feeling slim. </p>
+          <p>You can't just work out. You have to make sure you're eating right too! The Food Tracker is a surefire way to ensure that you will be fit in no time! Keep a daily log of what you want to eat and you'll be the ideal figure you've always wanted in no time.  </p>
           <p><a class="btn btn-default" href="/NuYu/Controllers/food.php" role="button">View details &raquo;</a></p>
         </div>
         <div class="col-md-4">

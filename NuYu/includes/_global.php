@@ -32,4 +32,11 @@
 	}
 	return $row2;
  }
+ 
+ 
+ 
+ function friends($sql)
+ {
+ 	
+ }
 	

@@ -10,7 +10,7 @@
     <div id="collapseOne" class="panel-collapse collapse in">
       <div class="panel-body">
         NuYu is a simple, easy to use app that was created by a little known programmer. Although it isn't backed by a major business yet, NuYu is sure to revolutionize the fitness application market! 
-      </div>
+     </div>
     </div>
   </div>
   <div class="panel panel-default">

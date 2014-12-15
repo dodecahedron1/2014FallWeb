@@ -51,6 +51,17 @@
 	      <input type="datetime-local" class="form-control" id="txtTime" name="Time" placeholder="Time" value="<?=date('m/d/Y H:i:s', strtotime( $model2['Date'])) ?>">
 		    </div>
 		  </div>
+		  <div class="form-group">
+		    <label for='formFriends[]'>Select the friends that you were with:</label><br>
+			<div class="col-sm-10">
+			<select multiple="multiple" name="formFriends[]">
+   						 <option value="Bill">Bill</option>
+  						 <option value="Alice">Alice</option>
+  						 <option value="Emily">Emily</option>
+  						 <option value="Shyah">Shyah</option>
+			</select>		    
+			</div>
+		  </div>
 		  </div>
 		  </form>
   </div>

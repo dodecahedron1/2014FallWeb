@@ -34,6 +34,21 @@
  // $graph->Add($bplot);
  // $graph->Stroke(); ?>
  			
+ 				<div class="container content">
+			<a class="btn btn-primary toggle-modal" data-target="#myModal" href="?action=create">
+ 					<i class="glyphicon glyphicon-plus"></i>
+ 					Edit
+ 				</a>
+ 				
+ 				<!-- Modal -->
+ 				<div class="modal fade" id="myModal" tabindex="-1" >
+ 				  <div class="modal-dialog">
+ 				    <div class="modal-content">
+ 				    </div>
+ 				  </div>
+ 				</div>
+ 			
+ 			
            <div class="table-responsive">
              <table class="table table-striped">
                <thead>
@@ -51,13 +66,9 @@
                   <td><?=$rs['Location']?></td>
                   <td><?=$rs['Email']?></td>
                   <td>
-                  	
-                  		<a title="Edit" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=edit&id=<?=$rs['id']?>">
-						<i class="glyphicon glyphicon-pencil"></i>
-						</a>
-						<a title="Delete" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=delete&id=<?=$rs['id']?>">
-						<i class="glyphicon glyphicon-trash"></i>
-						</a>
+                  	<a title="Delete" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=delete&id=<?=$rs['id']?>">
+					<i class="glyphicon glyphicon-trash"></i>
+					</a>
                   </td>
                   
                  </tr>

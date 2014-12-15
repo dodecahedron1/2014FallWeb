@@ -29,6 +29,8 @@
                    <th>Stretching (mins)</th>
                    <th>Weight</th>
                    <th>Date</th>
+                   <th>Social</th>
+                
                  </tr>
                </thead>
                <tbody>
@@ -40,6 +42,17 @@
                   <td><?=$rs['Stretching']?></td>
                   <td><?=$rs['Weight']?></td>
                   <td><?=$rs['Date']?></td>
+                  <td>
+                  	<label for='formFriends[]'>Select the friends that you were with:</label><br>
+						<select multiple="multiple" name="formFriends[]">
+   							 <option value="Bill">Bill</option>
+  						 	<option value="Alice">Alice</option>
+  						 	<option value="Emily">Emily</option>
+  						 	<option value="Shyah">Shyah</option>
+						</select>		    
+				</td>
+
+
                   <td>
                   	
                   		<a title="Edit" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=edit&id=<?=$rs['id']?>">

@@ -30,6 +30,7 @@
                    <th>Fiber (g)</th>
                    <th>Protein (g)</th>
                    <th>Time</th>
+                   <th>Social</th>
                  </tr>
                </thead>
                <tbody>
@@ -42,6 +43,13 @@
                   <td><?=$rs['Fiber']?></td>
                   <td><?=$rs['Protein']?></td>
                   <td><?=$rs['Time']?></td>
+                  <label for='formFriends[]'>Select the friends that you were with:</label><br>
+				  <select multiple="multiple" name="formFriends[]">
+   						 <option value="Bill">Bill</option>
+  						 <option value="Alice">Alice</option>
+  						 <option value="Emily">Emily</option>
+  						 <option value="Shyah">Shyah</option>
+				  </select>		    
                   <td>
                   	
 					<a title="Edit" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=edit&id=<?=$rs['id']?>">
@@ -80,5 +88,4 @@
 			});
  		</script>
  		
- 			});
- 		</script>
+ 	
