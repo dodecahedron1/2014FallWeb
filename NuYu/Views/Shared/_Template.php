@@ -29,7 +29,7 @@
 			<a class="navbar-brand" href="../Controllers/home.php">NuYu<span class="glyphicon glyphicon-heart-empty"></span></a>          </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="../Controllers/about.php">About Nuyu</a></li>
+                <li><a href="../Controllers/about.php">About NuYu</a></li>
                	<li><a href="../Controllers/progress.php">Excercise Tracker</a></li>
 				<li><a href="../Controllers/food.php">Food Tracker</a></li>
               	<li><a href="../Controllers/profile.php">Your NuYu</a></li>
@@ -69,6 +69,7 @@
 				     fjs.parentNode.insertBefore(js, fjs);
 				   }(document, 'script', 'facebook-jssdk'));
 				</script>
+				
    <script type="text/javascript">
 			var $socialScope = null;
 			angular.module('app', [])

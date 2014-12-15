@@ -10,7 +10,9 @@ class Food {
 	
 	public static function Get($id=null)
 	{
-		$sql = "	SELECT * FROM 2014_Fall_NuYu_Food_Eaten ";
+		$sql = " SELECT E.*, T.Name as T_Name
+						FROM 2014_Fall_NuYu_Food_Eaten E
+						Join 2014_Fall_NuYu_Users T ON E.User_id = T.id "; 
 		
 		if($id){
 			$sql .= " WHERE id=$id ";
