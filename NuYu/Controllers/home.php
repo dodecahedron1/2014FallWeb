@@ -31,9 +31,9 @@ switch ($format) {
 		include __DIR__ . "/../Views/$view";		
 		break;		
 	case 'web':
-	default:
-		include __DIR__ . "/../Views/Shared/_Template.php";	
-		include __DIR__ . "/../Views/$view";		
+	default:	
+		include __DIR__ . "/../Views/Shared/_Template.php";		
+		include __DIR__ . "/../Views/$view";
 		break;
 }
 ?>

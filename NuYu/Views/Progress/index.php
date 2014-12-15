@@ -1,78 +1,123 @@
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" >
-<div class="modal-dialog">
-<div class="modal-content">
-</div>
-</div>
-</div>
-
-      <div class="col-md-6 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Your Progress</h1>
-          
-        <a href="http://cs.newpaltz.edu/~n02511295/2014Fall/Views/Progress/edit.php"> <button class="btn btn-primary">Click here to submit your progress! </button></a>
-
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Weight Loss</h4>
-              <span class="text-muted">How much you've lost per entry.</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Caloric Intake</h4>
-              <span class="text-muted">Something else</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Excercise</h4>
-              <span class="text-muted">Hours worked out per week.</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>Towards your goal</h4>
-              <span class="text-muted">Where you should be towards your goal.</span>
-            </div>
-          </div>
-
-				
-				<!-- Alert -->
-				<div class="alert alert-success initialy-hidden" id="myAlert">
-					<button type="button" class="close" data-dismiss="alert">
-						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-					</button>
-					Excelent Job. Your progress has been recorded. 
-				</div>
-				
-          <div class="table-responsive">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Weight</th>
-                  <th>Caloric Intake</th>
-                  <th>Excercise (min)</th>
-                  <th>Date</th>
-                </tr>
-              </thead>
-              <tbody>
-              	<? foreach ($model as $rs): ?>
-                <tr>
-                  <td><?=$rs['Weight']?></td>
-                  <td><?=$rs['Calories']?></td>
-                  <td><?=$rs['Excercise']?></td>
-                  <td><?=$rs['Date']?></td>
-                </tr>
-                <? endforeach; ?>
-              </tbody>
-            </table>
-          </div>
-
+ 	<header>
+ 		<div class="container">
+				<h1>Excercise Tracker</h1>
 			</div>
-
-		<script type="text/javascript">
-			$(function(){
-								
-				$('#myModal').on('hidden.bs.modal', function (e) {
-				  $("#myAlert").show();
+ 	</header>
+ 
+ 			<div class="container content">
+			<a class="btn btn-success toggle-modal" data-target="#myModal" href="?action=create">
+ 					<i class="glyphicon glyphicon-plus"></i>
+ 					Add
+ 				</a>
+ 				
+ 				<!-- Modal -->
+ 				<div class="modal fade" id="myModal" tabindex="-1" >
+ 				  <div class="modal-dialog">
+ 				    <div class="modal-content">
+ 				    </div>
+ 				  </div>
+ 				</div>
+ 				
+ 			
+           <div class="table-responsive">
+             <table class="table table-striped">
+               <thead>
+                 <tr>
+                   <th>Arms (mins)</th>
+                   <th>Legs (mins)</th>
+                   <th>Cardio (mins)</th>
+                   <th>Stretching (mins)</th>
+                   <th>Weight</th>
+                   <th>Date</th>
+                 </tr>
+               </thead>
+               <tbody>
+                <? foreach ($model2 as $rs): ?>
+                <tr>
+                  <td><?=$rs['Arms']?></td>
+                  <td><?=$rs['Legs']?></td>
+                  <td><?=$rs['Cardio']?></td>
+                  <td><?=$rs['Stretching']?></td>
+                  <td><?=$rs['Weight']?></td>
+                  <td><?=$rs['Date']?></td>
+                  <td>
+                  	
+                  		<a title="Edit" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=edit&id=<?=$rs['id']?>">
+						<i class="glyphicon glyphicon-pencil"></i>
+						</a>
+						<a title="Delete" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=delete&id=<?=$rs['id']?>">
+						<i class="glyphicon glyphicon-trash"></i>
+						</a>
+                  </td>
+                  
+                 </tr>
+                <? endforeach; ?>
+               </tbody>
+             </table>
+           </div>
+ 
+ 			</div>
+ 
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.4.0/holder.js"></script>
+ 		<script type="text/javascript">
+ 			$(function(){
+ 				var $mContent = $("#myModal .modal-content");
+				var defaultContent = $mContent.html();				
+				var tmpl = Handlebars.compile($("#tmpl").html());
+ 				
+ 				$(".toggle-modal").on('click', function(event){
+					event.preventDefault();
+				$("#myModal").modal("show");
 				})
-			});
+
+				$.get(this.href + "&format=plain", function(data){
+						$mContent.html(data);
+						$mContent.find('form')
+ 						.on('submit', function(e){
+							e.preventDefault();
+							$("#myModal").modal("hide");
+						
+							$.post(this.action + '&format=json', $(this).serialize(), function(data){
+								$("#myAlert").show().find('div').html(JSON.stringify(data));
+							
+								
+								$('tbody').append(tmpl(data));
+								
+							}, 'json');
+							
+							
+						});
+					});
+ 				
+ 				$('#myModal').on('hidden.bs.modal', function (e) {
+ 				  $mContent.html(defaultContent);
+				    
+ 				})
+ 				
+				$('.alert .close').on('click',function(e){
+					$(this).closest('.alert').slideUp();
+				});
+ 			});
+ 		</script>
+ 		
+ 		<script type="text/anything" id="tmpl">
+                <tr>
+                  <td>{{Arms}}</td>
+                  <td>{{Legs}}</td>
+                  <td>{{Cardio}}</td>
+                  <td>{{Stretching}}</td>
+                  <td>{{Weight}}</td>
+                  <td>{{Date}}</td>
+                  <td>
+					<a title="Edit" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=edit&id={{id}}">
+						<i class="glyphicon glyphicon-pencil"></i>
+					</a>
+					<a title="Delete" class="btn btn-default btn-sm toggle-modal" data-target="#myModal" href="?action=delete&id={{id}}">
+						<i class="glyphicon glyphicon-trash"></i>
+					</a>
+                 	
+                  </td>
+                </tr>			
 		</script>
